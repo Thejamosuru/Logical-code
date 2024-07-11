@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks-JS</title>
+</head>
+<body>
+    <script>  
+    //-----factorial numbers-----
+        const factorial = prompt("Enter any number");
+        let add =1;
+        for(i=factorial;i>=1;i--){
+            add*=i;
+        }
+        console.log(add);
+
+        //-----Sum of odd numbers-----
+        let sum = 0;
+        for(i=11;i<=30;i++){
+            if(i%2 !==0){
+               sum+=i 
+            }
+        }
+        console.log(sum);
+
+        //-----Sum of the array-----
+        let range = [1,3,4,2,5,6,7,8,9,10];
+        let count =0;
+        for(i=0;i<range.length;i++){
+            count+=range[i]
+            console.log(count);
+        }
+        console.log(count);//sum of the array
+        console.log(count/2);//average of array
+
+        //-----printing positive numbers-----
+        function positive(){
+            let pos = [-5,-4,-2,-3,-1,0,1,2,3,4,5];
+            for(i=0;i<pos.length;i++){
+                if(pos[i] >0){
+                console.log(pos[i]);
+                }
+            }
+        }
+        positive();
+
+        //-----largest number in array-----
+        let kms = [1000,25,3,46,78,99,76,54,32,37,48,58,36,29,3,88];
+        let largest = kms[0];
+        for (i=0;i<kms.length;i++){
+            if(kms[i]>largest){
+                largest=kms[i]
+            }
+        }
+        console.log(largest);
+
+        //sum of positive numbers in array
+        let summ = [-5,-4,-3,-2,-1,0,1,2,3,4,5]
+        let addition = 0;
+        for(i=0;i<summ.length;i++){
+            if(summ[i]>0){
+                addition+=summ[i]
+            }
+        }
+        console.log(addition);
+
+        //removing 1st index in array and adding the same one in last.
+        summ.shift(-5);
+        summ.push(-5);
+        console.log(summ)
+
+        summ.pop();
+        summ.unshift(5);
+        console.log(summ);
+        
+        //square of 1-10 even numbers sum
+        let coount=0;
+        for(i=1;i<=10;i++){
+            if(i%2==0){
+                coount+=i*i;
+            }
+        }
+        console.log(coount);
+        
+        //Checking Vowel is not.
+        let alpha = prompt("Enter any Alphabit's");
+        let Vowel = ["a","e","i","o","u","A","E","I","O","U"];
+        if(Vowel.includes(alpha)){
+            console.log(`${alpha} is vowel`)
+        }
+        else{
+            console.log(`${alpha} is not vowel`)
+        }
+
+        //reverse method using string
+        const rever = "Achievers Institute";
+        const reve = rever.split(" ");
+        const rev = reve.reverse();
+        const re = reve.join("")
+        console.log(rev);
+
+        //random number between 1-100
+        console.log(Math.round(Math.random()*100));
+
+        //remove duplicate elements from an array
+        let order = [1,2,3,2,4,3,5,7,6,4,5,8,6,8,9,10,15,13,14,12,19,15,17,14];
+        let original =[];
+        for(i=0;i<order.length;i++){
+            if(!original.includes(order[i])){
+                original.push(order[i])
+            }
+        }
+        console.log(original);
+
+        //Every first letter is capital in a string
+        let sentence = "achievers institute is the best in bangalore";
+        let arrange = sentence.split(" ");
+        for(i=0;i<arrange.length;i++){
+            arrange[i] = arrange[i].charAt(0).toUpperCase() + arrange[i].substr(1,10);
+        }
+        let joint = arrange.join(" ");
+        console.log(joint);
+        
+
+        //check given number is even or not
+        let number = prompt("Enter the Number");
+            if(number%2==0){
+                console.log(`${number} is even number`)
+            }
+            else{
+                console.log(`${number} is odd number`)
+            }
+
+        //print only even number in given string
+        const prime = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+        for(i=0;i<=20;i++){
+            if(prime[i]%2==0){
+                console.log(prime[i]);
+            }
+        }
+        
+        //Write given string as reverse without using reverse method.
+        const letters = "Wonderlaw";
+        let Rletters="";
+        for(let i=letters.length-1;i>=0;i--){
+            Rletters+=letters[i]
+        }
+        console.log(Rletters);
+        
+    </script>
+</body>
+</html>
